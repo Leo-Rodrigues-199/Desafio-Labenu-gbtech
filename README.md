@@ -37,7 +37,7 @@ Para a validação do email fictício, os critérios específicos de cada variá
 **domain:** 1 a 16 caracteres, apenas letras minúsculas e numerais.
 
 ### Referências
-[F4Life](http://https://desafio-programa-desenvolve.surge.sh/ "F4Life") - exemplo de implementação do desafio. Básico, porém com todos os requisitos funcionais.
+[F4Life](https://desafio-programa-desenvolve.surge.sh/ "F4Life") - exemplo de implementação do desafio. Básico, porém com todos os requisitos funcionais.
 
 ### Preview do meu projeto:
 
