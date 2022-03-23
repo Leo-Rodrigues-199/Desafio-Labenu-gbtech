@@ -1,0 +1,344 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1100px;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+$primaryColor: #132235;
+$colorSecondary: #6ddad3;
+$contrastColor: #fff;
+$colorLink: #d0d0d0;
+$colorFormBg: #e8f0fe;
+@mixin mobile {
+  @media (max-width: 610px) {
+    @content;
+  }
+}
+@mixin section {
+  padding: 4rem 0;
+}
+@mixin textSection {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+  h1 {
+    font-size: 2rem;
+    display: inline-block;
+    font-weight: 500;
+    &::after {
+      content: "";
+      display: block;
+      height: 0.3rem;
+      width: 4.5rem;
+      margin-top: 0.5rem;
+      background-color: $colorSecondary;
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    margin: 1rem 0 2rem 0;
+  }
+}
+
+@mixin cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 450px));
+  justify-content: center;
+  gap: 25px;
+
+  .card {
+    border: 2px solid $colorSecondary;
+    border-radius: 5px;
+    .img {
+      margin-bottom: 1rem;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .text {
+      h2 {
+        margin-bottom: 1rem;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+      p {
+        line-height: 1.5;
+      }
+      ul {
+        list-style: none;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.Header {
+  background-color: $primaryColor;
+  padding: 1rem 0;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    @include mobile() {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 1rem;
+    }
+    .logo {
+      max-width: 200px;
+    }
+    .nav {
+      ul {
+        list-style: none;
+        display: flex;
+        li + li {
+          margin-left: 1rem;
+        }
+        .link {
+          display: flex;
+          flex-direction: column;
+          color: $contrastColor;
+          text-decoration: none;
+          padding: 0.3rem 0.8rem;
+
+          &::after {
+            content: "";
+            display: block;
+            transition: 0.5s;
+            margin-top: 2px;
+            height: 2px;
+            width: 10px;
+          }
+          &:hover {
+            color: $colorLink;
+            &::after {
+              width: 100%;
+              background: $colorSecondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../imgs/intro.jpg");
+  background-position: center 60%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgb(0 0 0 / 10%);
+  height: 80vh;
+  width: 100%;
+
+  .textSection {
+    text-align: center;
+    color: $contrastColor;
+    h1 {
+      max-width: 250px;
+      font-size: 4rem;
+      border: 0.3rem solid $colorSecondary;
+      margin: 0 auto 0 auto;
+      padding: 1rem 0;
+      font-weight: 500;
+      span {
+        color: $colorSecondary;
+        font-weight: 500;
+      }
+    }
+    p {
+      max-width: 500px;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+.Sobre {
+  @include section();
+  .textSection {
+    @include textSection();
+    color: $primaryColor;
+  }
+  .cards {
+    @include cards();
+    @include mobile() {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+.Servicos {
+  @include section();
+  background-color: $primaryColor;
+  .textSection {
+    @include textSection();
+    color: $contrastColor;
+  }
+  .cards {
+    @include cards();
+    @include mobile() {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      color: white;
+      .text {
+        padding: 0 2rem 2rem 2rem;
+        h2 {
+          text-align: center;
+          border-bottom: 1px dotted $contrastColor;
+          padding-bottom: 1rem;
+        }
+        p {
+          margin-bottom: 1rem;
+        }
+        ul {
+          margin-top: 2rem;
+          li {
+            &::before {
+              content: "\2713";
+              color: $colorSecondary;
+              margin-right: 0.5rem;
+            }
+            &:not(:last-child) {
+              margin-bottom: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.Contato {
+  @include section();
+  .textSection {
+    @include textSection();
+  }
+  fieldset {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: minmax(auto, 500px);
+    input,
+    textarea {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.3rem;
+      border: 2px solid $colorSecondary;
+      background: $colorFormBg;
+      &:focus {
+        outline: 1px solid $colorSecondary;
+      }
+    }
+    button {
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      background: $colorSecondary;
+      padding: 0.6rem;
+      border: none;
+      color: $contrastColor;
+      transition: 0.3s;
+      &:hover {
+        filter: brightness(95%);
+      }
+    }
+    .show_result {
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+      display: none;
+      &.error {
+        color: #842029;
+        background-color: #f8d7da;
+        display: block;
+      }
+      &.ok {
+        color: #0f5132;
+        background-color: #d1e7dd;
+        display: block;
+      }
+    }
+  }
+}
+
+.Footer {
+  background: $primaryColor;
+  padding: 2rem 0 1rem 0;
+
+  .logo {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+  .listas {
+    display: grid;
+    margin: 2rem 0;
+    grid-template-columns: 1fr auto;
+    @include mobile() {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+    .sociais,
+    .contato {
+      h2 {
+        font-weight: 500;
+        color: $colorSecondary;
+        margin-bottom: 1rem;
+      }
+      ul {
+        display: flex;
+        gap: 20px;
+
+        li {
+          a {
+            i {
+              transition: 0.3s;
+              color: $contrastColor;
+              font-size: 2.5rem;
+              &:hover {
+                color: $colorSecondary;
+              }
+            }
+          }
+          &:not(:last-child) {
+            margin-bottom: 0.6rem;
+          }
+        }
+      }
+      &.contato {
+        ul {
+          display: block;
+          a {
+            text-decoration: none;
+            color: $contrastColor;
+            &:hover {
+              color: $colorLink;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copy {
+    border-top: 1px dotted $contrastColor;
+    text-align: center;
+    color: $contrastColor;
+    padding-top: 1rem;
+  }
+}

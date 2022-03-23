@@ -1,0 +1,386 @@
+@charset "UTF-8";
+html {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Header {
+  background-color: #132235;
+  padding: 1rem 0;
+}
+.Header .wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+@media (max-width: 610px) {
+  .Header .wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 1rem;
+  }
+}
+.Header .wrapper .logo {
+  max-width: 200px;
+}
+.Header .wrapper .nav ul {
+  list-style: none;
+  display: flex;
+}
+.Header .wrapper .nav ul li + li {
+  margin-left: 1rem;
+}
+.Header .wrapper .nav ul .link {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;
+}
+.Header .wrapper .nav ul .link::after {
+  content: "";
+  display: block;
+  transition: 0.5s;
+  margin-top: 2px;
+  height: 2px;
+  width: 10px;
+}
+.Header .wrapper .nav ul .link:hover {
+  color: #d0d0d0;
+}
+.Header .wrapper .nav ul .link:hover::after {
+  width: 100%;
+  background: #6ddad3;
+}
+
+.Intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../imgs/intro.jpg");
+  background-position: center 60%;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.1);
+  height: 80vh;
+  width: 100%;
+}
+.Intro .textSection {
+  text-align: center;
+  color: #fff;
+}
+.Intro .textSection h1 {
+  max-width: 250px;
+  font-size: 4rem;
+  border: 0.3rem solid #6ddad3;
+  margin: 0 auto 0 auto;
+  padding: 1rem 0;
+  font-weight: 500;
+}
+.Intro .textSection h1 span {
+  color: #6ddad3;
+  font-weight: 500;
+}
+.Intro .textSection p {
+  max-width: 500px;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.Sobre {
+  padding: 4rem 0;
+}
+.Sobre .textSection {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+  color: #132235;
+}
+.Sobre .textSection h1 {
+  font-size: 2rem;
+  display: inline-block;
+  font-weight: 500;
+}
+.Sobre .textSection h1::after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  width: 4.5rem;
+  margin-top: 0.5rem;
+  background-color: #6ddad3;
+}
+.Sobre .textSection p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+}
+.Sobre .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 450px));
+  justify-content: center;
+  gap: 25px;
+}
+.Sobre .cards .card {
+  border: 2px solid #6ddad3;
+  border-radius: 5px;
+}
+.Sobre .cards .card .img {
+  margin-bottom: 1rem;
+}
+.Sobre .cards .card .img img {
+  max-width: 100%;
+}
+.Sobre .cards .card .text h2 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.Sobre .cards .card .text p {
+  line-height: 1.5;
+}
+.Sobre .cards .card .text ul {
+  list-style: none;
+  text-align: left;
+}
+@media (max-width: 610px) {
+  .Sobre .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.Sobre .cards .card {
+  padding: 1rem;
+  text-align: center;
+}
+
+.Servicos {
+  padding: 4rem 0;
+  background-color: #132235;
+}
+.Servicos .textSection {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+  color: #fff;
+}
+.Servicos .textSection h1 {
+  font-size: 2rem;
+  display: inline-block;
+  font-weight: 500;
+}
+.Servicos .textSection h1::after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  width: 4.5rem;
+  margin-top: 0.5rem;
+  background-color: #6ddad3;
+}
+.Servicos .textSection p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+}
+.Servicos .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 450px));
+  justify-content: center;
+  gap: 25px;
+}
+.Servicos .cards .card {
+  border: 2px solid #6ddad3;
+  border-radius: 5px;
+}
+.Servicos .cards .card .img {
+  margin-bottom: 1rem;
+}
+.Servicos .cards .card .img img {
+  max-width: 100%;
+}
+.Servicos .cards .card .text h2 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.Servicos .cards .card .text p {
+  line-height: 1.5;
+}
+.Servicos .cards .card .text ul {
+  list-style: none;
+  text-align: left;
+}
+@media (max-width: 610px) {
+  .Servicos .cards {
+    grid-template-columns: 1fr;
+  }
+}
+.Servicos .cards .card {
+  color: white;
+}
+.Servicos .cards .card .text {
+  padding: 0 2rem 2rem 2rem;
+}
+.Servicos .cards .card .text h2 {
+  text-align: center;
+  border-bottom: 1px dotted #fff;
+  padding-bottom: 1rem;
+}
+.Servicos .cards .card .text p {
+  margin-bottom: 1rem;
+}
+.Servicos .cards .card .text ul {
+  margin-top: 2rem;
+}
+.Servicos .cards .card .text ul li::before {
+  content: "✓";
+  color: #6ddad3;
+  margin-right: 0.5rem;
+}
+.Servicos .cards .card .text ul li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.Contato {
+  padding: 4rem 0;
+}
+.Contato .textSection {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+}
+.Contato .textSection h1 {
+  font-size: 2rem;
+  display: inline-block;
+  font-weight: 500;
+}
+.Contato .textSection h1::after {
+  content: "";
+  display: block;
+  height: 0.3rem;
+  width: 4.5rem;
+  margin-top: 0.5rem;
+  background-color: #6ddad3;
+}
+.Contato .textSection p {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem 0;
+}
+.Contato fieldset {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: minmax(auto, 500px);
+}
+.Contato fieldset input,
+.Contato fieldset textarea {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  border: 2px solid #6ddad3;
+  background: #e8f0fe;
+}
+.Contato fieldset input:focus,
+.Contato fieldset textarea:focus {
+  outline: 1px solid #6ddad3;
+}
+.Contato fieldset button {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #6ddad3;
+  padding: 0.6rem;
+  border: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.Contato fieldset button:hover {
+  filter: brightness(95%);
+}
+.Contato fieldset .show_result {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  display: none;
+}
+.Contato fieldset .show_result.error {
+  color: #842029;
+  background-color: #f8d7da;
+  display: block;
+}
+.Contato fieldset .show_result.ok {
+  color: #0f5132;
+  background-color: #d1e7dd;
+  display: block;
+}
+
+.Footer {
+  background: #132235;
+  padding: 2rem 0 1rem 0;
+}
+.Footer .logo {
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+.Footer .listas {
+  display: grid;
+  margin: 2rem 0;
+  grid-template-columns: 1fr auto;
+}
+@media (max-width: 610px) {
+  .Footer .listas {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+}
+.Footer .listas .sociais h2,
+.Footer .listas .contato h2 {
+  font-weight: 500;
+  color: #6ddad3;
+  margin-bottom: 1rem;
+}
+.Footer .listas .sociais ul,
+.Footer .listas .contato ul {
+  display: flex;
+  gap: 20px;
+}
+.Footer .listas .sociais ul li a i,
+.Footer .listas .contato ul li a i {
+  transition: 0.3s;
+  color: #fff;
+  font-size: 2.5rem;
+}
+.Footer .listas .sociais ul li a i:hover,
+.Footer .listas .contato ul li a i:hover {
+  color: #6ddad3;
+}
+.Footer .listas .sociais ul li:not(:last-child),
+.Footer .listas .contato ul li:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+.Footer .listas .sociais.contato ul,
+.Footer .listas .contato.contato ul {
+  display: block;
+}
+.Footer .listas .sociais.contato ul a,
+.Footer .listas .contato.contato ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.Footer .listas .sociais.contato ul a:hover,
+.Footer .listas .contato.contato ul a:hover {
+  color: #d0d0d0;
+}
+.Footer .copy {
+  border-top: 1px dotted #fff;
+  text-align: center;
+  color: #fff;
+  padding-top: 1rem;
+}/*# sourceMappingURL=style.css.map */

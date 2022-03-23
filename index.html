@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F4Life - Moradia estudantil</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="Header">
+      <div class="container">
+        <div class="wrapper">
+          <a href="/">
+            <img src="./assets/imgs/logo.png" alt="Logo F4Life" class="logo"
+          /></a>
+          <nav class="nav">
+            <ul>
+              <li><a href="#Sobre" class="link">Sobre</a></li>
+              <li><a href="#Servicos" class="link">Serviços</a></li>
+              <li><a href="#Contato" class="link">Contato</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="Intro">
+        <div class="container">
+          <div class="textSection">
+            <h1 class="title" data-aos="fade-down">F<span>4</span>Life</h1>
+            <p class="info" data-aos="fade-up">
+              Aqui você encontra a república estudantil para chamar de lar.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="Sobre" id="Sobre">
+        <div class="container">
+          <div class="textSection" data-aos="fade-up">
+            <h1 class="title">Sobre nós</h1>
+            <p class="info">
+              Há 10 anos a F4life vem facilitando a vida de universitários que
+              buscam a república ideal. Nossa missão é fazer com que você
+              encontre o tipo de moradia que mais combine com seu gosto. Conheça
+              algumas de nossas vantagens.
+            </p>
+          </div>
+          <div class="cards">
+            <div class="card" data-aos="fade-right">
+              <div class="img">
+                <img src="./assets/imgs/icons/check.png" alt="Reformas" />
+              </div>
+              <div class="text">
+                <h2>Moradias reformadas</h2>
+                <p>
+                  Todos os ambientes são preparados e decorados para seu
+                  conforto.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-right">
+              <div class="img">
+                <img src="./assets/imgs/icons/student.png" alt="estudante" />
+              </div>
+              <div class="text">
+                <h2>Você decide</h2>
+                <p>
+                  Atualmente disponibilizamos moradias individuais ou
+                  compartilhadas.
+                </p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-right">
+              <div class="img">
+                <img src="./assets/imgs/icons/money.png" alt="custo" />
+              </div>
+              <div class="text">
+                <h2>Cabe no seu bolso</h2>
+                <p>Diversas opções e valores personalizados de aluguéis.</p>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-right">
+              <div class="img">
+                <img src="./assets/imgs/icons/secure.png" alt="Segurança" />
+              </div>
+              <div class="text">
+                <h2>Locais seguros</h2>
+                <p>
+                  Portaria com segurança para tranquiliade dos alunos e
+                  familiares.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Servicos" id="Servicos">
+        <div class="container">
+          <div class="textSection" data-aos="fade-up">
+            <h1 class="title">Serviços</h1>
+            <p class="info">Temos as seguintes opções para você</p>
+          </div>
+          <div class="cards">
+            <div class="card" data-aos="fade-right">
+              <div class="img">
+                <img src="./assets/imgs/kitnet.jpg" alt="kitnet" />
+              </div>
+
+              <div class="text">
+                <h2>Kitnet</h2>
+                <ul>
+                  <li>Privacidade</li>
+                  <li>Silêncio</li>
+                  <li>Fácil Organização</li>
+                  <li>Limpeza</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card" data-aos="fade-right">
+              <div class="img">
+                <img
+                  src="./assets/imgs/republicas.jpg"
+                  alt="república estudantil"
+                />
+              </div>
+
+              <div class="text">
+                <h2>Moradia coletiva</h2>
+                <ul>
+                  <li>Valor Acessível</li>
+                  <li>Novas Amizades</li>
+                  <li>Crecimento Pessoal</li>
+                  <li>Troca de conhecimento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="Contato" id="Contato">
+        <div class="container">
+          <div class="textSection" data-aos="fade-up">
+            <h1 class="title">Contato</h1>
+            <p class="info">Entre em contato com a gente</p>
+          </div>
+
+          <form data-aos="fade-right" action="#" method="post" id="formContact">
+            <fieldset>
+              <div class="show_result"></div>
+              <label for="name">Nome:</label>
+              <input type="text" id="name" name="name" />
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" />
+              <label for="message">Mensagem:</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <button type="submit" id="formContatoBtn">Enviar</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="Footer">
+      <div class="container">
+        <img
+          src="./assets/imgs/logo.png"
+          alt="logo"
+          class="logo"
+          data-aos="zoom-in"
+        />
+        <div class="listas">
+          <div class="contato">
+            <h2>CONTATO</h2>
+            <ul>
+              <li>
+                <a href="tel:+552112344321" target="_blank">(21) 1234-4321</a>
+              </li>
+              <li>
+                <a href="mailto:f4life@contato.com" target="_blank"
+                  >f4life@contato.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="sociais">
+            <h2>SOCIAIS</h2>
+            <ul>
+              <li>
+                <a href="https://twitter.com/" target="_blank">
+                  <i class="fa-brands fa-twitter-square"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/" target="_blank"
+                  ><i class="fa-brands fa-instagram-square"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://facebook.com/" target="_blank"
+                  ><i class="fa-brands fa-facebook-square"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">@Todos os direitos reservados - 2022</div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+    <script src="./assets/script/script.js"></script>
+  </body>
+</html>
